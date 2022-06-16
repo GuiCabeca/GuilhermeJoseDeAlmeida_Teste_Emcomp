@@ -1,0 +1,46 @@
+.carrossel{
+    width: 900px;
+    height: 210px;
+    position: relative;
+    border: 2px solid black;
+    margin-left: 15rem;
+}
+
+img{
+    width: 900px;
+    height: 210px;
+    object-fit: fill;
+}
+
+.carrossel-botao{
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    z-index: 1; /* Pode ser qualquer valor maior que 0. Faz com que os botões fiquem na frente da imagem */
+    transform: translateY(-50%);    /* Coloca os botões na altura do centro da imagem */
+    color: rgba(0, 0, 0, 0.521);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.carrossel-botao:hover,
+.carrossel-botao:focus{
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.carrossel-botao:focus{
+    outline: 2px solid black;
+}
+
+.carrossel-botao.ant{
+    left: 1rem;
+}
+
+.carrossel-botao.prox{
+    right: 1rem;
+}

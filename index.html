@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD e Carousel</title>
+    <link rel="stylesheet" href="CSS\cssCRUD.css">
+    <link rel="stylesheet" href="CSS\cssCARROSSEL.css">
+</head>
+<body>
+    <h1>Livraria</h1>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off"> <!-- preventDafault() evita que o código mostre informação dos campos na url -->
+                    <div>
+                        <label>Nome do Livro:</label><label class="validacaoErro hide" id="nomeLivroValidacaoErro">     Esse campo é necessário!</label>
+                        <input type="text" name="nomeLivro" id="nomeLivro">
+                    </div>
+                    <div>
+                        <label>Autor do Livro:</label>
+                        <input type="text" name="autorLivro" id="autorLivro">
+                    </div>
+                    <div>
+                        <label>Preço do livro:</label>
+                        <input type="number" name="precoLivro" id="precoLivro">
+                    </div>
+                    <div>
+                        <label>ID do livro:</label>
+                        <input type="text" name="idLivro" id="idLivro">
+                    </div>
+                    <div class="botao">
+                        <input type="submit" value="Concluir">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="lista" id="informacoesLivro">
+                    <thead>
+                        <tr>
+                            <th>Nome do Livro</th>
+                            <th>Autor do Livro</th>
+                            <th>Preço do Livro</th>
+                            <th>ID do Livro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <!-- Javascript insere as informações do CRUD aqui -->
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Parte do Carrossel -->
+    
+    <div class="carrossel">
+        <div class="img-box">
+            <img src="Imagens/A1.jpg" alt="Imagem" class="muda-img">
+        </div>
+
+        <button class="carrossel-botao ant" onclick="anterior()">&#8656;</button>
+        <button class="carrossel-botao prox" onclick="proxima()">&#8658;</button>
+        </div>
+<script src="Javascript/javascriptCRUD.js" defer></script>
+<script src="Javascript/javascriptCARROSSEL.js" defer></script>
+</body>
+</html>
